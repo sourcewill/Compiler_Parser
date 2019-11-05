@@ -1,0 +1,15 @@
+a = (4-6) * 7 ^ 8
+print a
+
+a = 10
+b = 10,5
+c = a + b
+print c
+
+print 5*(5+7)
+
+5
+
+Will = 100
+
+hello_world = 1 + 1

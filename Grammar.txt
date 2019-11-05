@@ -1,0 +1,34 @@
+Gramática:
+
+(Inicial)
+S -> E | "print"E | I=E
+
+(Expressão matemática)
+E -> N | F | I | (E) | E+E | E-E | E*E | E/E | E^E
+
+(Número inteiro)
+N  -> 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | NN
+
+(Numero real)
+F -> N,N
+
+(Identificadores)
+I  -> "a"I2 | "b"I2 | ... | "z"I2 | "A"I2 | "B"I2 | ... | "Z"I2
+I2 -> "a"I2 | "b"I2 | ... | "z"I2 | "A"I2 | "B"I2 | ... | "Z"I2 | "0"I2 | "1"I2 | ... | "9"I2 | "_"I2
+
+
+
+Removendo recursão à esquerda:
+
+S -> E | "print"E | I=E
+
+E  -> NE' | FE' | IE' | (E)E'
+
+E' -> +EE' | -EE' | *EE' | /EE' | ^EE' | vazio
+
+N  -> 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 0N | 1N | 2N | 3N | 4N | 5N | 6N | 7N | 8N | 9N
+
+F -> N,N
+
+I  -> "a"I2 | "b"I2 | ... | "z"I2 | "A"I2 | "B"I2 | ... | "Z"I2
+I2 -> "a"I2 | "b"I2 | ... | "z"I2 | "A"I2 | "B"I2 | ... | "Z"I2 | "0"I2 | "1"I2 | ... | "9"I2 | "_"I2
