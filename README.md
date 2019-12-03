@@ -1,4 +1,4 @@
-# Recurive Parser for Compiler
+# Recursive Parser for Compiler
 
 ## A linguagem é composta por:
 
